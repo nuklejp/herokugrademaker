@@ -16,8 +16,14 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
-    Route::get('news/create', 'Admin\NewsController@add');
-    Route::post('news/create', 'Admin\NewsController@create');
+    Route::get('grade/create', 'Admin\GradeController@add');
+    Route::post('grade/create', 'Admin\GradeController@create');
+    Route::get('grade', 'Admin\GradeController@index');
+    Route::get('grade/edit', 'Admin\GradeController@edit'); // 追記
+    Route::post('grade/edit', 'Admin\GradeController@update'); // 追記
+    Route::get('grade/delete', 'Admin\GradeController@delete');
+
+
 });
 
 Auth::routes();
