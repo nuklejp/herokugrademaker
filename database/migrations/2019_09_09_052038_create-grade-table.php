@@ -15,8 +15,8 @@ class CreateGradeTable extends Migration
      {
          Schema::create('grade', function (Blueprint $table) {
              $table->increments('id');
-             $table->string('name'); // ニュースのタイトルを保存するカラム
-             $table->string('test');  // ニュースの本文を保存するカラム
+             $table->string('name');
+             $table->string('test');  
              $table->string('homework');
              $table->string('expression');
              $table->string('pronunciation');
