@@ -13,10 +13,10 @@ class CreateGradeTable extends Migration
      */
      public function up()
      {
-         Schema::create('grade', function (Blueprint $table) {
+         Schema::create('grades', function (Blueprint $table) {
              $table->increments('id');
              $table->string('name');
-             $table->string('test');  
+             $table->string('test');
              $table->string('homework');
              $table->string('expression');
              $table->string('pronunciation');
